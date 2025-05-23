@@ -139,3 +139,10 @@ This project is licensed under the [MIT License](LICENSE).
 - [React](https://reactjs.org/)
 - [Create React App](https://create-react-app.dev/)
 - [Shields.io](https://shields.io/) for badges
+
+---
+
+## 🙋‍♂️ Author
+
+- **Portfolio:** [https://portfolio-umber-alpha-52.vercel.app/](https://portfolio-umber-alpha-52.vercel.app/)
+- **GitHub:** [https://github.com/Amarb2002](https://github.com/Amarb2002)
