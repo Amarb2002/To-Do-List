@@ -16,6 +16,7 @@ function All() {
     const [tasks, setTasks] = useState([]);
     const [editTask, setEditTask] = useState(null);
     const [showEditForm, setShowEditForm] = useState(false);
+    const [editFormError, setEditFormError] = useState('');
     const shownOverdueIds = useRef(new Set());
 
     useEffect(() => {
@@ -66,6 +67,16 @@ function All() {
 
     const handleEditSubmit = (e) => {
         e.preventDefault();
+        // Validate employerName: only alphabets and spaces
+        if (!editTask.employerName.trim()) {
+            setEditFormError("Employer name is required.");
+            return;
+        }
+        if (!/^[a-zA-Z\s]+$/.test(editTask.employerName.trim())) {
+            setEditFormError("Employer name must contain only letters and spaces.");
+            return;
+        }
+        setEditFormError('');
         setTasks((prev) => {
             const updated = prev.map((t) => t.id === editTask.id ? editTask : t);
             localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
@@ -209,6 +220,11 @@ function All() {
                             <span className="icon" role="img" aria-label="edit">✏️</span>
                             Edit Task
                         </h3>
+                        {editFormError && (
+                            <div style={{ color: "#e53935", marginBottom: 8, textAlign: "center" }}>
+                                {editFormError}
+                            </div>
+                        )}
                         <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
                             <label style={{ width: '100%', textAlign: 'left' }}>
                                 Employer Name*<br />
@@ -228,6 +244,8 @@ function All() {
                                         marginTop: 4
                                     }}
                                     placeholder="Enter employer name"
+                                    pattern="[A-Za-z\s]+"
+                                    title="Only alphabets and spaces allowed"
                                 />
                             </label>
                             <label style={{ width: '100%', textAlign: 'left' }}>
