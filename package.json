@@ -1,0 +1,25 @@
+{
+    "name": "lop",
+    "version": "1.0.0",
+    "description": "Employee Training Tracker",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "dependencies": {
+        "react-router-dom": "^6.23.0",
+        "react-scripts": "^5.0.1",
+        "web-vitals": "^3.3.1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+    ]
+}

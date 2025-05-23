@@ -1,0 +1,104 @@
+/* Minimal completed tasks styles */
+.completed-tasks-container { padding: 1rem; }
+.completed-tasks-list { list-style: none; padding: 0; }
+
+/* General */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd 0%, #fce4ec 100%);
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+/* Dashboard Container */
+
+
+/* Responsive */
+@media (max-width: 700px) {
+    .dashboard-container {
+        padding: 16px 4vw;
+    }
+}
+
+/* Completed Task Details */
+z
+.completed-task-details:hover {
+    box-shadow: 0 4px 16px rgba(56,142,60,0.10);
+}
+
+/* List */
+.completed-tasks-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Icon Styles */
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+/* Buttons */
+button, .dashboard-btn, .login-btn {
+    background: linear-gradient(90deg, #1976d2 60%, #ec407a 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(79,140,255,0.08);
+}
+button:hover, .dashboard-btn:hover, .login-btn:hover {
+    background: linear-gradient(90deg, #1565c0 60%, #ad1457 100%);
+}
+
+/* Inputs */
+input[type="text"], input[type="password"], input[type="datetime-local"] {
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    transition: border 0.2s;
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="datetime-local"]:focus {
+    border: 1.5px solid #1976d2;
+    outline: none;
+}
+
+/* Headings */
+h2, h3 {
+    font-family: 'Segoe UI Semibold', Arial, sans-serif;
+    color: #1976d2;
+    margin-bottom: 8px;
+}
+h3 {
+    color: #388e3c;
+}
+
+/* Utility */
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    background: #e3f2fd;
+}
+::-webkit-scrollbar-thumb {
+    background: #90caf9;
+    border-radius: 8px;
+}

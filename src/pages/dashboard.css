@@ -1,0 +1,268 @@
+/* Minimal dashboard styles */
+.dashboard-container { padding: 1rem; }
+
+/* Table container */
+.dashboard-container {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 24px 0;
+}
+
+/* Table styling */
+.training-table {
+    width: 98%;
+    min-width: 1100px;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(79,140,255,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+/* Table header */
+.training-table th {
+    background: #4f8cff;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 2px solid #e3e3e3;
+}
+
+/* Table rows */
+.training-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+/* Zebra striping */
+.training-table tbody tr:nth-child(even):not(.overdue-row) {
+    background: #f7faff;
+}
+
+/* Row hover */
+.training-table tbody tr:hover:not(.overdue-row) {
+    background: #eaf2ff;
+    transition: background 0.2s;
+}
+
+/* Overdue row */
+tr.overdue-row {
+    background: #ffebee !important;
+    color: #b71c1c;
+}
+
+/* Status badges */
+.status-completed {
+    background: #22c55e;
+    color: #fff !important;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.95em;
+    font-weight: 500;
+    display: inline-block;
+}
+.status-pending {
+    background: #ff9800;
+    color: #fff !important;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.95em;
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* Due reminder icon */
+.due-reminder {
+    margin-left: 6px;
+    color: #e53935;
+    font-size: 1.1em;
+    vertical-align: middle;
+}
+
+/* Dashboard buttons */
+.dashboard-btn {
+    background: linear-gradient(90deg, #1976d2 60%, #ec407a 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(79,140,255,0.08);
+}
+.dashboard-btn:hover {
+    background: linear-gradient(90deg, #1565c0 60%, #ad1457 100%);
+}
+
+/* Dashboard container */
+.dashboard-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 32px;
+    box-sizing: border-box;
+}
+
+/* Responsive: mobile view */
+@media (max-width: 600px) {
+    .dashboard-container {
+        max-width: 100%;
+        padding: 14px 6px;
+    }
+    .dashboard-cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .dashboard-card {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    /* Center the Add Task popup form fields */
+    .dashboard-add-task-form {
+        min-width: 80% !important;
+        width: 100% !important;
+        max-width: 370px !important;
+        padding: 24px 8px 18px 8px !important;
+    }
+    .dashboard-add-task-form > div {
+        align-items: center !important;
+    }
+}
+
+/* Center the Add Task popup form fields on desktop too */
+.dashboard-add-task-form {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+}
+
+/* Dashboard title */
+.dashboard-container h2 {
+    color: #1976d2;
+    margin-bottom: 18px;
+}
+
+/* Dashboard cards */
+.dashboard-container .dashboard-cards {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+.dashboard-container .dashboard-card {
+    background: #e3f2fd;
+    padding: 16px;
+    border-radius: 8px;
+    min-width: 160px;
+    flex: 1 1 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 2px 8px rgba(79,140,255,0.06);
+    margin-bottom: 12px;
+}
+.dashboard-container .dashboard-card .icon {
+    font-size: 2rem;
+    margin-bottom: 6px;
+}
+.dashboard-container .dashboard-card strong {
+    font-size: 1.1rem;
+    color: #1976d2;
+}
+.dashboard-container .dashboard-card .dashboard-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1976d2;
+}
+
+/* Card status variations */
+.dashboard-container .dashboard-card.overdue {
+    background: #ffebee;
+}
+.dashboard-container .dashboard-card.pending {
+    background: #fffde7;
+}
+.dashboard-container .dashboard-card.total {
+    background: #e3f2fd;
+}
+
+/* Reminder popup */
+.reminder-popup-content {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(79,140,255,0.18);
+    padding: 32px;
+}
+
+/* Overdue popup */
+.overdue-popup-content {
+    background: #ffebee !important;
+    border: 2px solid #e53935;
+    box-shadow: 0 4px 24px rgba(229,57,53,0.18);
+}
+
+/* Due reminder message */
+.due-reminder-message {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: 6px;
+    padding: 10px 16px;
+    margin: 18px 0 0 0;
+    font-size: 1.05em;
+    font-weight: 500;
+}
+
+/* Responsive table */
+@media (max-width: 700px) {
+    .training-table, .training-table thead, .training-table tbody, .training-table th, .training-table td, .training-table tr {
+        display: block;
+    }
+    .training-table thead {
+        display: none;
+    }
+    .training-table tr {
+        margin-bottom: 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(79,140,255,0.06);
+        background: #fff;
+    }
+    .training-table td {
+        padding: 10px 12px;
+        border: none;
+        position: relative;
+    }
+    .training-table td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #4f8cff;
+        display: block;
+        margin-bottom: 4px;
+    }
+}
+
+/* Narrow input fields */
+.dashboard-input-narrow {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .dashboard-input-narrow {
+        max-width: 196vw;
+        min-width: 190px;
+    }
+}
