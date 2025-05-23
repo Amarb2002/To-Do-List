@@ -1,18 +1,49 @@
-# Employee Training Todo Application
+# 🚀 Employee Training Todo Application
 
-## Overview
+![GitHub repo size](https://img.shields.io/github/repo-size/your-username/employee-training-todo)
+![GitHub stars](https://img.shields.io/github/stars/your-username/employee-training-todo?style=social)
+![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-The Employee Training Todo application is designed to help organizations track employee training tasks efficiently. It allows users to manage their training tasks, set reminders, and monitor completed tasks.
+> **A modern, easy-to-use app for managing employee training tasks, deadlines, and progress.**
 
-## Features
+---
 
-- **User Authentication**: Employees can log in to access their training tasks.
-- **Task Management**: Users can add, remove, and mark training tasks as completed.
-- **Reminders**: Set reminders for specific tasks to ensure timely completion.
-- **Dashboard**: View overall status of tasks and navigate to different sections of the application.
-- **Completed Tasks**: A dedicated page to view all tasks that have been completed.
+## 🌟 Overview
 
-## Project Structure
+The **Employee Training Todo** application helps organizations efficiently track and manage employee training tasks. Assign, monitor, and complete training activities with ease.
+
+---
+
+## 🖼️ Assets
+
+|            Screenshot             |
+| :-------------------------------: |
+| ![App Screenshot](images/sc1.jpg) |
+| ![App Screenshot](images/sc2.jpg) |
+| ![App Screenshot](images/sc3.jpg) |
+| ![App Screenshot](images/se4.jpg) |
+
+> **If images are not displaying on GitHub, ensure:**
+>
+> - The images are located in the `images` folder at the root of your repository.
+> - The filenames and extensions match exactly (including case sensitivity).
+> - There are no extra spaces or typos in the filenames.
+
+---
+
+## ✨ Features
+
+- 🔒 **User Authentication**: Secure login for employees.
+- 📝 **Task Management**: Add, edit, remove, and mark training tasks as completed.
+- ⏰ **Reminders**: Set reminders for timely completion.
+- 📊 **Dashboard**: Visual overview of all tasks and statuses.
+- ✅ **Completed Tasks**: View all finished training items.
+- 📅 **Due Dates**: Track deadlines and overdue tasks.
+- 🌙 **Dark/Light Mode**: Comfortable viewing at any time.
+
+---
+
+## 📁 Project Structure
 
 ```
 employee-training-todo
@@ -28,6 +59,7 @@ employee-training-todo
 │   ├── pages
 │   │   ├── Dashboard.js
 │   │   ├── CompletedTasks.js
+│   │   ├── All.js
 │   │   └── Login.js
 │   ├── styles
 │   │   ├── header.css
@@ -37,56 +69,73 @@ employee-training-todo
 │   ├── App.js
 │   ├── index.js
 │   └── reportWebVitals.js
+├── images
+│   └── screenshot.png
 ├── package.json
 └── README.md
 ```
 
-## Installation
+---
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory:
-   ```
-   cd employee-training-todo
-   ```
-3. Install the dependencies:
-   ```
-   npm install
-   ```
+## 🚀 Getting Started
 
-## Usage
+### 1. **Clone the repository**
 
-1. Start the development server:
-   ```
-   npm start
-   ```
-2. Open your browser and go to `http://localhost:3000` to view the application.
+```bash
+git clone https://github.com/your-username/employee-training-todo.git
+cd employee-training-todo
+```
 
-## Troubleshooting
+### 2. **Install dependencies**
 
-### "babel-jest" Dependency Error
+```bash
+npm install
+```
 
-If you see an error about `babel-jest` when running `npm start`, follow these steps:
+### 3. **Run the app**
 
-1. Delete `package-lock.json` (not `package.json`!) and/or `yarn.lock` in your project folder.
-2. Delete the `node_modules` folder in your project folder.
-3. Remove `"babel-jest"` from `dependencies` and/or `devDependencies` in your `package.json` file.
-4. Run `npm install` to reinstall dependencies.
+```bash
+npm start
+```
 
-If the problem persists, you can bypass the check by adding the following line to a new `.env` file in your project root:
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 🛠️ Troubleshooting
+
+**"babel-jest" Dependency Error**
+
+1. Delete `package-lock.json` and/or `yarn.lock`.
+2. Delete the `node_modules` folder.
+3. Remove `"babel-jest"` from `package.json` dependencies.
+4. Run `npm install` again.
+
+If issues persist, add this to a new `.env` file:
 
 ```
 SKIP_PREFLIGHT_CHECK=true
 ```
 
-This will disable the preflight check, but use with caution as it may hide other issues.
+_Use with caution as it may hide other issues._
 
-## Contributing
+---
 
-Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
+## 🤝 Contributing
 
-## License
+Pull requests and suggestions are welcome!  
+Please open an issue or submit a PR for improvements.
 
-This project is licensed under the MIT License.
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Acknowledgements
+
+- [React](https://reactjs.org/)
+- [Create React App](https://create-react-app.dev/)
+- [Shields.io](https://shields.io/) for badges
